@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
             required:true
         },
         age:{
-            type:String,
+            type:Number,
             required:true
         },
        party:{
@@ -29,11 +29,10 @@ const mongoose = require("mongoose");
         ],
         votesCounting:{
             type:Number,
-            required:true
         }
     }
 ],{timestamps:true});
 
-const Candidate = mongoose.model("User",candidateSchema);
+const Candidate = mongoose.model("Candidate",candidateSchema);
 
 module.exports = Candidate;
